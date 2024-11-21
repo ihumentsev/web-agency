@@ -1,5 +1,5 @@
 import Container from "../Container/Container";
-import { Section, SectionText, SuccessList, WraperTitle } from "./SuccessSection.styled";
+import { Section, SectionText, WraperTitle } from "./SuccessSection.styled";
 
 
 export default function SuccessSection(){

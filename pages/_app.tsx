@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { ThemeProvider, DefaultTheme } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { useEffect } from "react";
 
 import { I18nextProvider } from "react-i18next";
@@ -7,7 +7,7 @@ import i18n from "../configs/i18n.mjs";
 
 import { useRouter } from "next/router";
 import { SessionProvider } from "next-auth/react";
-import GlobalStyle, { lightTheme, darkTheme } from '../components/globalstyles';
+import GlobalStyle, {  darkTheme } from '../components/globalstyles';
 
 
 

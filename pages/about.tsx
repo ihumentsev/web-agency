@@ -1,9 +1,10 @@
 import { useSession } from "next-auth/react";
-import Image from "next/image";
+
 import LayoutHome from "../components/LayoutHome/LayoutHome";
 import VideoSection from "../components/VideoSection/VideoSection";
 
 export default function About(){
+  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
     const { data: session } = useSession();
  
         

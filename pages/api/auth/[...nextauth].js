@@ -42,7 +42,7 @@ console.log(users);
               const currentUser = users.find(user => user.email === credentials.email)
 
               if(currentUser && currentUser.password === credentials.password) {
-            
+            // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
               const { password, ...userWithoutPass } = currentUser;
 
                 return userWithoutPass 

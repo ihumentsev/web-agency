@@ -6,7 +6,6 @@ import Hero from "../components/Hero/Hero";
 import Benefits from "../components/Benefits/Benefits";
 import SuccessSection from "../components/SuccessSection/SuccessSection";
 import Reviews from "../components/Reviews/Reviews";
-import Services from "../components/Services/Services";
 import ProjectsTiles from "../components/ProjectSections/ProjectsTiles";
 import QuestionsSection from "../components/QuestionsSection/QuestionsSection";
 import VideoSection from "../components/VideoSection/VideoSection";

@@ -58,7 +58,7 @@ const ServicesItem = styled.li`
     align-items: flex-end;
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавность */
     
-    /* eslint-disable-next-line */
+    // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
     container-type: inline-size;
     /* Адаптивность контейнера */
     @media screen and (min-width: 480px) {
