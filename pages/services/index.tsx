@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import LayoutHome from "../../components/LayoutHome/LayoutHome";
 import { useRouter } from "next/router";
-import Hero from "../../components/Hero/Hero";
 import Link from "next/link";
+import GoBack from "../../components/GoBack/GoBack";
 
 export default function Services(){
     const [ready, setReady] = useState(false);
@@ -21,10 +21,8 @@ export default function Services(){
         ready && (
         <>
         <LayoutHome>
-            <div>jfdjfkf</div>
-            <Hero>
-            </Hero>
-            <Link href="/services/1">hkjhkjhkjhk</Link>
+        <GoBack prevPath={{ }} title="Services"/>
+            <Link style={{background: "red"}} href="/services/1">Click me</Link>
         </LayoutHome>
         </>
         )

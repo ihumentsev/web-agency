@@ -19,5 +19,7 @@ const PageLayout = styled.div``;
 const MainBox = styled.main`
   position: relative;
   min-height: 100%;
+  padding-top: 100px;
+  background-color: ${({ theme }) => theme.colors.lightBackground};
   z-index: 2;
 `;

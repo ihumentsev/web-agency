@@ -1,34 +1,34 @@
 import { useSession } from "next-auth/react";
-
 import LayoutHome from "../components/LayoutHome/LayoutHome";
-import VideoSection from "../components/VideoSection/VideoSection";
+import GoBack from "../components/GoBack/GoBack";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import AboutHero from "../components/AboutHero/AboutHero";
+import TechSection from "../components/TechSection/TechSection";
 
-export default function About(){
+export default function About() {
   // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-    const { data: session } = useSession();
- 
-        
-    
-    
-     return (
-        
-        <>
+  const { data: session } = useSession();
+  const [ready, setReady] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.isReady) {
+      setReady(true);
+    }
+  }, [router.isReady]);
+
+  return (
+    ready && (
+      <>
         <LayoutHome>
-            <>
-            <div>About ifgigfigfi</div>
-            <div>About ifgigfigfi</div>
-           
-            <VideoSection/>
-            </>
-           
-        {/* session && (
-        <h2>About {session.user.name}</h2>
-           <div>{session.user.email}</div>
-           <Image width={200} height={200} src={session.user.image} alt="jhjhjh"></Image>
-        ) */}
+          <>
+            <GoBack prevPath={{}} title="About us" />
+            <AboutHero />
+            <TechSection />
+          </>
         </LayoutHome>
-        
-        </>
-        
+      </>
     )
+  );
 }
