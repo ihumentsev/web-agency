@@ -73,10 +73,49 @@ export default function Header() {
       }
     };
   }, [lastScrollY, scrollTimeout, isMouseOverHeader]);
+
+
+  useEffect(() => {
+    const header = document.getElementById('header');
+    const sections = document.querySelectorAll('section');
+   
+
+    const handleScroll = () => {
+      let currentSection = '';
+  
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop; // Верхняя граница секции
+        const sectionHeight = section.clientHeight; // Высота секции
+        const scrollY = window.scrollY; // Текущая прокрутка страницы
+  
+        // Проверяем, если верхняя граница секции находится в пределах видимой области экрана
+        if (scrollY >= sectionTop  && scrollY < sectionTop + sectionHeight ) {
+          currentSection = section.dataset.section; // получаем значение data-section
+        console.log("currentSection", currentSection);
+        
+        }
+      });
+
+      if (currentSection === 'dark') {
+        console.log("dark");
+        
+        header.classList.add('dark-bg');
+        header.classList.remove('light-bg'); 
+      } else if (currentSection === 'light') {
+        console.log("light");
+        header.classList.add('light-bg');
+        header.classList.remove('dark-bg');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <HeaderBox >
-      < HeaderWraper className={isHidden ? "hidden" : ""} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+      < HeaderWraper id="header" className={isHidden ? "hidden" : ""} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
         <Container>
           <ContentWraper>
           <Link href="/">

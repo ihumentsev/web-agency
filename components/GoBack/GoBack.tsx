@@ -30,7 +30,7 @@ export default function GoBack({ prevPath, title }) {
 }
 
 const Wraper = styled.div`
-  background-color: ${({ theme }) => theme.colors.darckBackground};
+  /* background-color: ${({ theme }) => theme.colors.darckBackground}; */
   padding: 100px 0 0 0;
 `;
 const LinkList = styled.ul`

@@ -5,10 +5,13 @@ const HeaderWraper = styled.div`
 position: fixed;
   top: 0;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.darckBackground};
+  /* background-color: ${({ theme }) => theme.colors.darckBackground}; */
   transition: transform 0.6s ease;
   &.hidden {
     transform: translateY(-100%);
+  }
+  &.light-bg{
+    background-color: ${({ theme }) => theme.colors.darckBackground};
   }
 `
 const ContentWraper = styled.div`
@@ -53,6 +56,10 @@ const HeaderBox = styled.header`
   /* &.hidden {
     transform: translateY(-100%);
   } */
+   & .dark-bg{
+
+   }
+   
 `;
 const NavigationList = styled.ul`
   display: flex;

@@ -24,7 +24,7 @@ export default function TechSection() {
   const [filter, setFilter] = useState("web");
   return (
     <>
-      <SectionTech>
+      <SectionTech data-section="light" className="light-section">
         <Container>
           <ContentWraper>
             <TitleWraper>

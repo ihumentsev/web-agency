@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import AboutHero from "../components/AboutHero/AboutHero";
 import TechSection from "../components/TechSection/TechSection";
+import TeamSection from "../components/TeamSection/TeamSection";
+import CaseSection from "../components/CaseSection/CaseSection";
 
 export default function About() {
   // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
@@ -23,9 +25,11 @@ export default function About() {
       <>
         <LayoutHome>
           <>
-            <GoBack prevPath={{}} title="About us" />
+            {/* <GoBack prevPath={{}} title="About us" /> */}
             <AboutHero />
             <TechSection />
+            <TeamSection/>
+            <CaseSection/>
           </>
         </LayoutHome>
       </>

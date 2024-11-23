@@ -34,6 +34,10 @@ const SectionTech = styled.section`
 
 const ContentWraper = styled.div`
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+  }
 `;
 
 const TitleWraper = styled.div`
@@ -72,6 +76,7 @@ const TitleWraper = styled.div`
 `;
 const FilterList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   & li {
     padding: 10px 15px;
@@ -89,12 +94,12 @@ const FilterList = styled.ul`
     &.active {
       background: ${({ theme }) => theme.colors.darckBackground};
       box-shadow: 0 0 20px 10px rgba(17, 17, 43, 0.5);
-      color: ${({ theme }) => theme.colors.lightText};
+      color: ${({ theme }) => theme.colors.colorText};
     }
     &:hover {
       background: ${({ theme }) => theme.colors.darckBackground};
       box-shadow: 0 0 20px 10px rgba(17, 17, 43, 0.5);
-      color: ${({ theme }) => theme.colors.lightText};
+      color: ${({ theme }) => theme.colors.colorText};
     }
   }
 `;
@@ -145,8 +150,10 @@ const TechItem = styled.li`
       /* max-height: 100%; */
       height: 80px;
       object-fit: contain;
+      margin-top: auto;
       flex-grow: 0; /* Убирает вытеснение заголовка */
       filter: brightness(0) saturate(100%);
+      transition: filter 0.3s ease;
     }
   }
 
@@ -158,7 +165,7 @@ const TechItem = styled.li`
     /* background-color: #11112B; */
 
     /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%); */
-    margin-top: auto; /* Гарантирует, что заголовок будет снизу */
+    margin-top: auto; 
     flex-shrink: 0; /* Убирает сжатие заголовка */
     color: ${({ theme }) => theme.colors.darkText};
   }
@@ -172,6 +179,7 @@ const TechItem = styled.li`
   }
   &:hover img {
     filter: none;
+    transform: scale(1.3);
   }
 `;
 

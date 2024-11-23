@@ -1,10 +1,12 @@
 import Container from "../Container/Container";
 import styled from "styled-components";
+import GoBack from "../GoBack/GoBack";
 
 export default function AboutHero() {
   return (
     <>
-      <AboutUsSection>
+      <AboutUsSection data-section="dark" className="dark-section">
+      <GoBack prevPath={{}} title="About us" /> 
         <Container>
           <h2>About Us</h2>
           <ContentWraper>
@@ -34,6 +36,9 @@ const AboutUsSection = styled.section`
   background-color: ${({ theme }) => theme.colors.darckBackground};
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  background-image: url('/fon1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   @media screen and (min-width: 768px) {
     padding: 0 0 150px 0;
   }
