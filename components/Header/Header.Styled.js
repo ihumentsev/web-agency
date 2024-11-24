@@ -51,7 +51,7 @@ const HeaderBox = styled.header`
   /* width: 100%; */
   
   /* transition: transform 0.6s ease; */
-  z-index: 20;
+  z-index: 5;
 
   /* &.hidden {
     transform: translateY(-100%);
@@ -131,8 +131,8 @@ display: none;
 `;
 
 const MobileBtn = styled.button`
-   width: 40px;
-   height: 40px;
+   width: 30px;
+   height: 30px;
    padding: 10px 16px;
    display: flex;
    justify-content: center;

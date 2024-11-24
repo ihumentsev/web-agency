@@ -12,6 +12,9 @@ import {
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import LngBox from "../LngBox/LngBox";
+import Portal from "../ModalPortal/ModalPortel";
+import useModal from "../../Hooks/useModal"
+import MobileMenuModal from "../Modals/MobileMenuModal";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -19,6 +22,7 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scrollTimeout, setScrollTimeout] = useState(null);
   const [isMouseOverHeader, setIsMouseOverHeader] = useState(false);
+  const { mounted,  backDropClose, toggleModal} = useModal();
 
 
 
@@ -150,9 +154,11 @@ export default function Header() {
             <SignInBtn href="/about">CONTACT US</SignInBtn>
            
             <LngBox/>
-            <MobileBtn>
+            <MobileBtn onClick={toggleModal}>
             </MobileBtn>
-            
+            <Portal modalStatus={mounted} backDropClose={backDropClose}>
+              <MobileMenuModal modalStatus={mounted} backDropClose={backDropClose}></MobileMenuModal>
+            </Portal>
           </ContentWraper>
         </Container>
         </HeaderWraper>

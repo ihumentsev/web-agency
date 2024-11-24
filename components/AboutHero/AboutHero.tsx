@@ -39,6 +39,7 @@ const AboutUsSection = styled.section`
   background-image: url('/fon1.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  
   @media screen and (min-width: 768px) {
     padding: 0 0 150px 0;
   }
@@ -49,13 +50,13 @@ const AboutUsSection = styled.section`
   }
   & h2 {
     color: ${({ theme }) => theme.colors.lightText};
-
     font-size: clamp(24px, 5vw + 1rem, 100px);
     font-style: normal;
     font-weight: 700;
     line-height: clamp(30px, 6vw + 2rem, 110px);
     line-height: clamp(30px, 6vw + 2rem, 110px);
     text-align: center;
+    margin-top: 40px;
     @media screen and (min-width: 768px) {
       text-align: start;
       max-width: 350px;
@@ -67,8 +68,8 @@ const AboutUsSection = styled.section`
 `;
 
 const ContentWraper = styled.div`
-  display: flex;
-  padding: 100px 0;
+  
+  padding: 50px 0;
   & h3 {
     display: flex;
     align-items: last baseline;
@@ -76,21 +77,30 @@ const ContentWraper = styled.div`
     font-size: clamp(24px, 3vw + 1rem, 56px);
     max-width: 745px;
     /* margin-right: 250px; */
-    text-align: start;
+    text-align: center;
+    
+    @media screen and (min-width: 768px) {
+        text-align: start;
+    }
   }
   & p {
     margin: 0;
     /* width: 50%; */
     color: ${({ theme }) => theme.colors.lightText};
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 30px; /* 150% */
     text-align: center;
     margin-left: auto;
+    margin-top: 30px;
     @media screen and (min-width: 768px) {
       font-size: 20px;
       max-width: 680px;
       text-align: start;
     }
+  }
+  @media screen and (min-width: 900px){
+    display: flex;
+    padding: 100px 0;
   }
 `;

@@ -35,7 +35,7 @@ const SectionTech = styled.section`
 const ContentWraper = styled.div`
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 1200px){
     flex-direction: row;
   }
 `;
@@ -43,8 +43,14 @@ const ContentWraper = styled.div`
 const TitleWraper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
-
+  width:100%;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 40%;
+    flex-direction: column;
+  }
   & p {
     max-width: 500px;
     color: ${({ theme }) => theme.colors.darkText};
@@ -78,6 +84,7 @@ const FilterList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
   & li {
     padding: 10px 15px;
     background-color: transparent;
@@ -109,26 +116,38 @@ const TechList = styled.ul`
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 40px;
+  justify-content: center;
 `;
 const TechItem = styled.li`
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 40%;
   height: 170px;
   border-radius: 25px;
-  border: 1px solid var(--Stroke-Gradient, rgba(255, 255, 255, 0.2));
-  background: var(
-    --Gradient-White,
+  border: 1px solid  rgba(255, 255, 255, 0.9);
+  background: 
     linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.3) 0%,
-      rgba(255, 255, 255, 0.4) 100%
-    )
-  );
-
+      rgba(255, 255, 255, 0.8) 100%
+    );
   align-items: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
+@media screen and (min-width: 480px){
+  width: 200px
+}
+@media screen and (min-width: 600px){
+  width: 180px
+}
+@media screen and (min-width: 768px){
+  width: 230px
+}
+@media screen and (min-width: 900px){
+  width: 200px
+}
+@media screen and (min-width: 1080px){
+  width: 180px
+}
   &:hover {
     background: ${({ theme }) => theme.colors.darckBackground};
     box-shadow: 0 0 20px 10px rgba(17, 17, 43, 0.5);
@@ -184,8 +203,12 @@ const TechItem = styled.li`
 `;
 
 const ListWraper = styled.div`
-  margin-left: 150px;
-  margin-top: 40px;
+  /* margin-left: 150px; */
+  margin-top: 80px;
+  @media screen and (min-width: 1400px) {
+    margin-left: 150px;
+    margin-top: 40px;
+  }
 `;
 
 export {
