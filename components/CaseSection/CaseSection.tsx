@@ -3,6 +3,8 @@ import Container from "../Container/Container";
 import Image from "next/image";
 import {CaseItem, CaseList, ContentWraper, DescriptionWraper, OverlayItem, SectionCase} from './CaseSection.styled';
 import img from "../../images/project4.png";
+import img1 from "../../images/project.jpg";
+import img2 from "../../images/project1.png";
 
 export default function CaseSection(){
     return (
@@ -14,7 +16,7 @@ export default function CaseSection(){
                 <CaseList>
                     <CaseItem>
                         {/* <Link href="#"> */}
-                        <Image src={img} width={400} height={400} alt="#"/>
+                        <Image src={img2} width={400} height={400} alt="#"/>
                         <DescriptionWraper>
                         <p>2022</p>
                         <h3>Na vchora</h3>
@@ -32,11 +34,11 @@ export default function CaseSection(){
                         <Image src={img} width={400} height={400} alt="#"/>
                         <DescriptionWraper>
                         <p>2022</p>
-                        <h3>Na vchora</h3>
+                        <h3>Mika Medika</h3>
                         </DescriptionWraper>
                         <OverlayItem className="overlay">
                             <p>03 / 2023</p>
-                            <h3>Na vchora</h3>
+                            <h3>Mika Medika</h3>
                             <p>Mika Medika Healthcare, a large hospital network, was concerned about the security of their patient data.</p>
                             <Link href="#">READ MORE</Link>
                         </OverlayItem>
@@ -44,14 +46,14 @@ export default function CaseSection(){
                     </CaseItem>
                     <CaseItem>
                         {/* <Link href="#"> */}
-                        <Image src={img} width={400} height={400} alt="#"/>
+                        <Image src={img1} width={400} height={400} alt="#"/>
                         <DescriptionWraper>
                         <p>2022</p>
-                        <h3>Na vchora</h3>
+                        <h3>DEF Manufacture</h3>
                         </DescriptionWraper>
-                        <OverlayItem className="overlay">
+                        <OverlayItem className="overlay last">
                             <p>03 / 2023</p>
-                            <h3>Na vchora</h3>
+                            <h3>DEF Manufacture</h3>
                             <p>Mika Medika Healthcare, a large hospital network, was concerned about the security of their patient data.</p>
                             <Link href="#">READ MORE</Link>
                         </OverlayItem>

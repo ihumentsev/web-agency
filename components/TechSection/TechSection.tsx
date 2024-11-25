@@ -28,12 +28,15 @@ export default function TechSection() {
         <Container>
           <ContentWraper>
             <TitleWraper>
+              <div>
               <h2>Technology Stack</h2>
               <p>
                 This article explores the top trends that are expected to shape
                 the landscape of web development in 2023, highlighting the key
                 areas where developers should focus on working.
               </p>
+              </div>
+              
               <ArrowButton
                 text="More technology"
                 handler={() => {

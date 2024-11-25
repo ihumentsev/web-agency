@@ -5,9 +5,9 @@ const SectionCase = styled.section`
   background-color: ${({ theme }) => theme.colors.lightBackground};
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  /* background-image: url('/fon1.svg');
+  background-image: url('/grayBack.svg');
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: contain;
   @media screen and (min-width: 768px) {
     padding: 150px 0 150px 0;
   }
@@ -39,75 +39,120 @@ const SectionCase = styled.section`
 `
 const ContentWraper = styled.div`
   position: relative;
+  padding-top: 100px;
+  @media screen and (min-width: 768px){
+    padding-top: 0px;
+  }
 `
 const CaseList = styled.ul`
 display: grid;
-grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
-/* grid-template-rows: repeat(3, auto);  */
-   /* Левая и правая колонки */
-  /* grid-template-rows:  1fr;  */
-  gap: 30px; /* Отступы между элементами */
+grid-template-columns: 1fr; 
+  gap: 30px; 
   width: 100%;
-  height: fit-content; /* Задаём высоту для визуального эффекта */
-  border-radius: 15px;
+  height: fit-content; 
   justify-content: space-between; 
-
   @media screen and (min-width: 768px){
-    grid-template-columns: 795px 795px;
+    grid-template-columns: 350px 350px;
+  }
+  @media screen and (min-width: 900px){
+    grid-template-columns: 420px 420px;
+  }
+  @media screen and (min-width: 1080px){
+    grid-template-columns: 500px 500px;
+  }
+  @media screen and (min-width: 1200px){
+    grid-template-columns: 580px 580px;
+  }
+  @media screen and (min-width: 1400px){
+    grid-template-columns: 600px 600px;
+  }
+  @media screen and (min-width: 1440px){
+    grid-template-columns: 680px 680px;
+  }
+  @media screen and (min-width: 1560px){
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
   }
 `
 const CaseItem = styled.li`
 position: relative;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  border-radius: 50px; /* Скругление углов */
+  border-radius: 50px; 
   text-align: center;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
   background-color: #D9D9D9;
   overflow: hidden;
-   &:first-child{
-    width: 100%; /* Полная ширина для всех элементов */
-    grid-column: 1 / 2; /* Все элементы в одной колонке */
+  width: 100%;
+  height: 300px;
+   &:first-child{ 
+    grid-column: 1 / 2; 
     grid-row: auto;
     @media screen and (min-width: 768px){
-        grid-column: 1 / 2;            /* Занимает всю левую колонку */
-  grid-row: 1 / 3; 
-  /* height: 80%;  */
-  align-self: self-end;
-  height: 700px;
+        grid-column: 1 / 2;           
+        grid-row: 1 / 3; 
+       align-self: self-end;
+       height: 420px;
+    }
+    @media screen and (min-width: 1000px){
+       
+       height: 460px;
+    }
+    /* @media screen and (min-width: 1440px){
+        height: 600px;
+    } */
+    @media screen and (min-width: 1560px){
+        height: 680px;
     }
     
    }
    &:nth-child(2){
-    width: 100%; /* Полная ширина для всех элементов */
-    grid-column: 1 / 2; /* Все элементы в одной колонке */
+    grid-column: 1 / 2; 
     grid-row: auto;
     @media screen and (min-width: 768px){
-        grid-column: 2 / 3;            /* Занимает верхнюю правую часть */
-    grid-row: 1 / 2;
-    width: 795px;
-    height: 480px;
+        grid-column: 2 / 3;            
+        grid-row: 1 / 2;
+        /* width: 300px; */
+        height: 300px;
     }
-    
+    @media screen and (min-width: 1000px){
+       
+       height: 320px;
+    }
+    /* @media screen and (min-width: 1440px){
+        height: 400px;
+    } */
+    @media screen and (min-width: 1560px){
+        height: 460px;
+    }
    }
    &:last-child{
-    width: 100%; /* Полная ширина для всех элементов */
-    grid-column: 1 / 2; /* Все элементы в одной колонке */
+    
+    grid-column: 1 / 2; 
     grid-row: auto;
     @media screen and (min-width: 768px){
-        grid-column: 2 / 3;            /* Занимает нижнюю правую часть */
-    grid-row: 2 / 3;
-    width: 795px;
-    height: 350px;
+        grid-column: 2 / 3;            
+        grid-row: 2 / 3;
+        height: 300px;
+    & .last{
+        
+        & h3{
+            font-size: 30px;
+        }
+    }
+    }
+    @media screen and (min-width: 1000px){
+       
+       height: 300px;
+    }
+    /* @media screen and (min-width: 1440px){
+        height: 380px;
+    } */
+    @media screen and (min-width: 1560px){
+        height: 360px;
     }
     
    }
 
-/* & a{
-    width: 100%;
-    height: 100%;
-}    */
+
 & img{
     display: block;
     width: 100%;
@@ -120,10 +165,23 @@ position: relative;
 `
 const DescriptionWraper = styled.div`
 position: absolute;
-bottom: 60px;
-left: 60px;
+bottom: 0px;
+left: 0px;
+width: 100%;
+padding: 30px;
+background: linear-gradient(
+    rgba(0, 0, 0, 0) 5%,
+    rgba(0, 0, 0, 0.1) 15%,
+    rgba(0, 0, 0, 0.2) 25%,  
+    rgba(0, 0, 0, 0.8) 95%
+    
+  );
+@media screen and (min-width: 468px){
+    /* bottom: 25px;
+    left: 25px; */
+}
 & p{
-    color:  #11112B;
+    color:  #fff;
 font-size: 20px;
 font-weight: 400;
 line-height: 30px;
@@ -131,10 +189,12 @@ text-align: start;
 margin: 0;
 }
 & h3{
-    color:  #11112B;
+color:  #fff;
 font-size: 56px;
+font-size: clamp(10px, 2vw + 1rem, 56px);
 font-weight: 700;
 line-height: normal;
+text-align: start;
 }
 `
 const OverlayItem = styled.div`
@@ -158,24 +218,29 @@ backdrop-filter: blur(5px);
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-padding: 40px;
+padding: clamp(15px, 4vw, 40px);
 display: none;
 transition: background 1.3s ease;
+@media screen and (min-width: 468px){
+    padding: clamp(10px, 4vw + 1rem, 40px);
+}
 & p{
     color: #FFF;
 /* text-align: center; */
-font-size: 20px;
+/* font-size: 20px; */
+font-size: clamp(10px, 2vw , 20px);
 font-weight: 400;
-line-height: 30px; 
+line-height: clamp(15px, 3vw , 30px); 
 text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 margin: 0;
 }
 & h3 {
     color:  #FFF;
 /* text-align: center; */
-font-size: 100px;
+/* font-size: 100px; */
+font-size: clamp(12px, 3vw + 1rem, 100px);
 font-weight: 700;
-line-height: 110px;
+line-height: clamp(20px, 5vw + 1rem, 110px);
 text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 & a{

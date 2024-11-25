@@ -44,6 +44,8 @@ const TitleWraper = styled.div`
   display: flex;
   flex-direction: column;
   width:100%;
+  /* justify-content: center; */
+  /* align-items: center; */
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
@@ -70,11 +72,13 @@ const TitleWraper = styled.div`
     color: ${({ theme }) => theme.colors.darkText};
     width: fit-content;
     height: fit-content;
-    margin-left: auto;
+    /* margin-left: auto; */
     margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    @media screen and (min-width: 768px) {
+    /* margin-right: auto;
+    margin-left: auto; */
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+      margin-top: 40px;
       /* margin-top: 0; */
       /* margin-right: 0; */
     }
@@ -84,7 +88,7 @@ const FilterList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
+  justify-content: flex-start;
   & li {
     padding: 10px 15px;
     background-color: transparent;
@@ -109,6 +113,9 @@ const FilterList = styled.ul`
       color: ${({ theme }) => theme.colors.colorText};
     }
   }
+  @media screen and (min-width: 1200px){
+    justify-content: center;
+  }
 `;
 
 const TechList = styled.ul`
@@ -122,7 +129,7 @@ const TechItem = styled.li`
   display: flex;
   flex-direction: column;
   width: 40%;
-  height: 170px;
+  height: 120px;
   border-radius: 25px;
   border: 1px solid  rgba(255, 255, 255, 0.9);
   background: 
@@ -134,6 +141,7 @@ const TechItem = styled.li`
   align-items: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 @media screen and (min-width: 480px){
+  height: 170px;
   width: 200px
 }
 @media screen and (min-width: 600px){
@@ -167,13 +175,17 @@ const TechItem = styled.li`
       display: block;
       width: 100%;
       /* max-height: 100%; */
-      height: 80px;
+      height: 60%;
       object-fit: contain;
       margin-top: auto;
       flex-grow: 0; /* Убирает вытеснение заголовка */
       filter: brightness(0) saturate(100%);
       transition: filter 0.3s ease;
+      @media screen and (min-width: 480px){
+      height: 80px;
     }
+    }
+    
   }
 
   & h3 {
@@ -186,7 +198,11 @@ const TechItem = styled.li`
     /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%); */
     margin-top: auto; 
     flex-shrink: 0; /* Убирает сжатие заголовка */
+    font-size: 14px;
     color: ${({ theme }) => theme.colors.darkText};
+    @media screen and (min-width: 480px){
+      font-size: 18px;
+    }
   }
   &:hover h3 {
     color: ${({ theme }) => theme.colors.lightText};
@@ -205,9 +221,12 @@ const TechItem = styled.li`
 const ListWraper = styled.div`
   /* margin-left: 150px; */
   margin-top: 80px;
-  @media screen and (min-width: 1400px) {
-    margin-left: 150px;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
     margin-top: 40px;
+  }
+  @media screen and (min-width: 1400px) {
+    max-width: 58%;
   }
 `;
 

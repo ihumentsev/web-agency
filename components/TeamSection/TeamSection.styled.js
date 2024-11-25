@@ -29,6 +29,57 @@ const SectionTeam = styled.div`
       /* max-width: fit-content; */
     }
   }
+  & .slider-container{
+    padding: 20px;
+    min-height: 0;
+    min-width: 0;
+    
+   & .slick-list{
+    &::before,
+  &::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  pointer-events: none; /* Чтобы градиенты не мешали взаимодействию */
+  z-index: 2;
+  @media screen and (min-width: 768px){
+    width: 300px;
+  }
+}
+&::before {
+  left: 0;
+  background: linear-gradient(to right, ${({ theme }) => theme.colors.darckBackground}, transparent);
+}
+&::after {
+  right: 0;
+  background: linear-gradient(to left, ${({ theme }) => theme.colors.darckBackground}, transparent);
+}
+   }
+   /* & .slick-list{
+    padding-top: 40px;
+   } */
+   & .slick-center{
+      opacity: 1;
+      transform: scale(1.1); 
+      /* margin-left: 40px; */
+      /* margin-right: 40px; */
+}
+& .slick-slide {
+  padding: 15px;
+  transition: transform 0.6s ease;
+  @media screen and (min-width: 600px){
+    padding: 40px;
+  }
+
+}
+& .slick-track {
+  padding-top: 20px;
+}
+    
+  }
+
 `
 const TitleWraper = styled.div`
    & p {
@@ -41,12 +92,18 @@ const TeamList = styled.ul`
    gap: 100px;
    margin-top: 80px;
    justify-content: center;
+   @media screen and (min-width: 600px){
+    gap: 20px;
+   }
+   @media screen and (min-width: 768px){
+    gap: 40px;
+   }
 `
 const BackdropItem = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  padding: 48px;
+  padding: 20px;
   /* transform: translate(-50%, -50%); */
   width: 100%;
   height: 100%;
@@ -59,19 +116,26 @@ const BackdropItem = styled.div`
   /* overflow: hidden; */
   /* background: linear-gradient(180deg, transparent 0%, rgba(17, 17, 43, 1) 100%); */
   transition: background 0.3s ease;
- 
+  @media screen and (min-width: 768px){
+    padding: 20px;
+  }
 
   & div {
     position: absolute;
     bottom: 40px;
-    right: 40px;
-    width: 48px;
-    height: 48px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
     background-image: url('/icons/ArrowIconSmol.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: none;
+    @media screen and (min-width: 768px){
+      right: 40px;
+    width: 48px;
+    height: 48px;
+  }
   }
 
   & h3 {
@@ -93,16 +157,42 @@ const BackdropItem = styled.div`
   }
 `;
 
-const TeamItem = styled.li`
+const TeamItem = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 424px;
-  height: 600px;
+  /* width: 424px; */
+  /* height: 600px; */
+  /* width: 100%; */
+  width: 60%;
+  height: 500px;
   border-radius: 25px;
   overflow: hidden;
   transition: transform 0.6s ease;
-
+  /* border-bottom: solid 1px #fff; */
+  @media screen and (min-width: 480px){
+    height: 550px
+  }
+  @media screen and (min-width: 600px){
+    /* width: 260px; */
+    height: 360px
+  }
+  @media screen and (min-width: 768px){
+    /* width: 340px; */
+    height: 400px
+  }
+  @media screen and (min-width: 1080px){
+    /* width: 400px; */
+    height: 450px
+  }
+  @media screen and (min-width: 1200px){
+    /* width: 350px; */
+    height: 450px
+  }
+  @media screen and (min-width: 1440px){
+    /* width: 400px; */
+    height: 500px
+  }
   & a {
     width: 100%;
     height: 100%;
@@ -113,9 +203,21 @@ const TeamItem = styled.li`
   & img {
     display: block;
     width: 100%;
-    height: 456px;
+    /* height: 456px; */
+    object-fit: cover;
+    height: 70%;
     border-radius: 25px;
     transition: transform 0.6s ease, object-fit 0.3s ease;
+    @media screen and (min-width: 480px){
+    height: 75%
+;  }
+
+@media screen and (min-width: 600px){
+  height: 65%
+}
+@media screen and (min-width: 1440px){
+  height: 70%
+}
   }
 
   &:hover {
@@ -124,7 +226,7 @@ const TeamItem = styled.li`
 
   &:hover img {
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
     transform: scale(1.1); 
   }
 

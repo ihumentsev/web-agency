@@ -46,6 +46,14 @@ export default function Header() {
       }
     }
 
+    // Логика изменения класса
+    const header = document.getElementById("header");
+    if (currentScrollY > 0) {
+      header.classList.add("not-at-top");
+    } else {
+      header.classList.remove("not-at-top");
+    }
+
       // Обновляем последнее положение прокрутки
       setLastScrollY(currentScrollY);
 
@@ -79,42 +87,60 @@ export default function Header() {
   }, [lastScrollY, scrollTimeout, isMouseOverHeader]);
 
 
-  useEffect(() => {
-    const header = document.getElementById('header');
-    const sections = document.querySelectorAll('section');
+  // useEffect(() => {
+  //   const header = document.getElementById('header');
+  //   const sections = document.querySelectorAll('section');
    
 
-    const handleScroll = () => {
-      let currentSection = '';
+  //   const handleScroll = () => {
+  //     let currentSection = '';
   
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop; // Верхняя граница секции
-        const sectionHeight = section.clientHeight; // Высота секции
-        const scrollY = window.scrollY; // Текущая прокрутка страницы
+  //     sections.forEach((section) => {
+  //       const sectionTop = section.offsetTop; // Верхняя граница секции
+  //       const sectionHeight = section.clientHeight; // Высота секции
+  //       const scrollY = window.scrollY; // Текущая прокрутка страницы
   
-        // Проверяем, если верхняя граница секции находится в пределах видимой области экрана
-        if (scrollY >= sectionTop  && scrollY < sectionTop + sectionHeight ) {
-          currentSection = section.dataset.section; // получаем значение data-section
-        console.log("currentSection", currentSection);
+  //       // Проверяем, если верхняя граница секции находится в пределах видимой области экрана
+  //       if (scrollY >= sectionTop  && scrollY < sectionTop + sectionHeight ) {
+  //         currentSection = section.dataset.section; // получаем значение data-section
+  //       console.log("currentSection", currentSection);
         
-        }
-      });
+  //       }
+  //     });
 
-      if (currentSection === 'dark') {
-        console.log("dark");
+  //     if (currentSection === 'dark') {
+  //       console.log("dark");
         
-        header.classList.add('dark-bg');
-        header.classList.remove('light-bg'); 
-      } else if (currentSection === 'light') {
-        console.log("light");
-        header.classList.add('light-bg');
-        header.classList.remove('dark-bg');
-      }
-    };
+  //       header.classList.add('dark-bg');
+  //       header.classList.remove('light-bg'); 
+  //     } else if (currentSection === 'light') {
+  //       console.log("light");
+  //       header.classList.add('light-bg');
+  //       header.classList.remove('dark-bg');
+  //     }
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
+
+
+  // useEffect(() => {
+  //   const header = document.getElementById('header');
+  
+  //   const handleScroll = () => {
+  //     const headerRect = header.getBoundingClientRect();
+  //     if (headerRect.top === 0) {
+  //       header.classList.add('light-bg');
+  //     } else {
+  //       header.classList.remove('light-bg');
+  //     }
+  //   };
+  
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
+  
 
   return (
     <>

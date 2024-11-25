@@ -6,11 +6,11 @@ position: fixed;
   top: 0;
   width: 100%;
   /* background-color: ${({ theme }) => theme.colors.darckBackground}; */
-  transition: transform 0.6s ease;
+  transition:  background-color 0.6s ease, transform 0.6s ease;
   &.hidden {
     transform: translateY(-100%);
   }
-  &.light-bg{
+  &.not-at-top{
     background-color: ${({ theme }) => theme.colors.darckBackground};
   }
 `

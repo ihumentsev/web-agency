@@ -94,7 +94,7 @@ const FormWraper = styled.div`
   padding: 30px 15px;
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: 30px;
   & ul{
     display: flex;
     align-self: center;
