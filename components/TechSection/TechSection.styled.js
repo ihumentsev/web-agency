@@ -5,6 +5,7 @@ const SectionTech = styled.section`
   background-color: ${({ theme }) => theme.colors.lightBackground};
   background-image: url("/back.png");
   background-size: cover;
+  /* background-repeat: no-repeat; */
   @media screen and (min-width: 768px) {
     padding: 150px 0;
   }
@@ -87,10 +88,13 @@ const TitleWraper = styled.div`
 const FilterList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: flex-start;
+  @media screen and (min-width: 768px){
+    gap: 30px;
+  }
   & li {
-    padding: 10px 15px;
+    padding: 5px 10px;
     background-color: transparent;
     border-radius: 15px;
     border: 1px solid var(--White, #fff);
@@ -99,9 +103,13 @@ const FilterList = styled.ul`
     color: ${({ theme }) => theme.colors.darkText};
     width: fit-content;
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 26px; /* 162.5% */
+    @media screen and (min-width: 768px){
+      font-size: 16px;
+      padding: 10px 15px;
+    }
     &.active {
       background: ${({ theme }) => theme.colors.darckBackground};
       box-shadow: 0 0 20px 10px rgba(17, 17, 43, 0.5);

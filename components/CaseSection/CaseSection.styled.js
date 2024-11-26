@@ -5,9 +5,10 @@ const SectionCase = styled.section`
   background-color: ${({ theme }) => theme.colors.lightBackground};
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  background-image: url('/grayBack.svg');
+  /* background-image: url('/grayBack.svg'); */
+  background-image: url('/layered-waves-haikei.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   @media screen and (min-width: 768px) {
     padding: 150px 0 150px 0;
   }

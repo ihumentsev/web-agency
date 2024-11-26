@@ -7,6 +7,8 @@ import AboutHero from "../components/AboutHero/AboutHero";
 import TechSection from "../components/TechSection/TechSection";
 import TeamSection from "../components/TeamSection/TeamSection";
 import CaseSection from "../components/CaseSection/CaseSection";
+import QuesttionFormSection from "../components/QuesttionFormSection/QuesttionFormSection";
+import GetConsultatioSection from "../components/GetConsultatioSection/GetConsultatioSection";
 
 export default function About() {
   // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
@@ -30,6 +32,8 @@ export default function About() {
             <TechSection />
             <TeamSection/>
             <CaseSection/>
+            <QuesttionFormSection/>
+            <GetConsultatioSection/>
           </>
         </LayoutHome>
       </>
