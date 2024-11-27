@@ -12,6 +12,7 @@ const MobileModal = styled.div`
   height: 100%;
   transition: transform 1s ease;
   padding: 10px 15px;
+  overflow-y: auto;
   &.active {
     transform: translateX(0%);
   }

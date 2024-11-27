@@ -172,12 +172,12 @@ export default function Header() {
                   <Link href="">{t("navigation.blog")}</Link>
                 </li>
                 <li>
-                  <Link href="">{t("navigation.contacts")}</Link>
+                  <Link href="/contact">{t("navigation.contacts")}</Link>
                 </li>
               </NavigationList>
             </nav>
 
-            <SignInBtn href="/about">CONTACT US</SignInBtn>
+            <SignInBtn href="/contact">CONTACT US</SignInBtn>
            
             <LngBox/>
             <MobileBtn onClick={toggleModal}>

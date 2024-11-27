@@ -6,7 +6,7 @@ export default function AboutHero() {
   return (
     <>
       <AboutUsSection data-section="dark" className="dark-section">
-      <GoBack prevPath={{}} title="About us" /> 
+        <GoBack prevPath={{}} title="About us" />
         <Container>
           <h2>About Us</h2>
           <ContentWraper>
@@ -36,15 +36,15 @@ const AboutUsSection = styled.section`
   background-color: ${({ theme }) => theme.colors.darckBackground};
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  background-image: url('/fon1.svg');
+  background-image: url("/fon1.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   @media screen and (min-width: 768px) {
-    padding: 0 0 150px 0;
+    padding: 50px 0 150px 0;
   }
   @media screen and (min-width: 1400px) {
-    padding: 0 0 200px 0;
+    padding: 50px 0 200px 0;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
   }
@@ -68,7 +68,6 @@ const AboutUsSection = styled.section`
 `;
 
 const ContentWraper = styled.div`
-  
   padding: 50px 0;
   & h3 {
     display: flex;
@@ -78,9 +77,9 @@ const ContentWraper = styled.div`
     max-width: 745px;
     /* margin-right: 250px; */
     text-align: center;
-    
+
     @media screen and (min-width: 768px) {
-        text-align: start;
+      text-align: start;
     }
   }
   & p {
@@ -99,7 +98,7 @@ const ContentWraper = styled.div`
       text-align: start;
     }
   }
-  @media screen and (min-width: 900px){
+  @media screen and (min-width: 900px) {
     display: flex;
     padding: 100px 0;
   }
