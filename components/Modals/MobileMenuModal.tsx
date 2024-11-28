@@ -56,15 +56,15 @@ const changeLanguage = (lng) => {
                         <Link href="/services" className={router.asPath === "/services" ? "active" : null}>Services</Link>
                     </li>
                     <li>
-                        <Link href="/">Pricing</Link>
+                        <Link href="/" className={router.asPath === "/price" ? "active" : null}>Pricing</Link>
                         <button type="button" onClick={subMenuHendler}></button>
                     </li>
                     <li>
-                        <Link href="/">Blog</Link>
+                        <Link href="/blog" className={router.asPath === "/blog" ? "active" : null}>Blog</Link>
                         <button type="button" onClick={subMenuHendler}></button>
                     </li>
                     <li>
-                        <Link href="/">Contacts</Link>
+                        <Link href="/contact" className={router.asPath === "/contact" ? "active" : null}>Contacts</Link>
                     </li>
                 </LinkList>
                 <BackdropMenu className={activeSubMenu ? "active" : null}>

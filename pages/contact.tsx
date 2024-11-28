@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import LayoutHome from "../components/LayoutHome/LayoutHome";
 import ContactSection from "../components/ContactSection/ContactSection";
+import GetConsultatioSection from "../components/GetConsultatioSection/GetConsultatioSection";
 
 export default function Contact(){
     const [ready, setReady] = useState(false);
@@ -18,6 +19,7 @@ export default function Contact(){
         <>
         <LayoutHome>
         <ContactSection/>
+        <GetConsultatioSection/>
         </LayoutHome>
         
             </>
