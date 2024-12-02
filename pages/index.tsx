@@ -11,6 +11,7 @@ import QuestionsSection from "../components/QuestionsSection/QuestionsSection";
 import VideoSection from "../components/VideoSection/VideoSection";
 import CardServices from "../components/CardServices/CardServices";
 
+
 export default function Home() {
   const [ready, setReady] = useState(false);
   const router = useRouter();
@@ -50,6 +51,7 @@ export default function Home() {
        
         
       </LayoutHome>
+    
     </>
     )
   );

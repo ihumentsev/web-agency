@@ -15,6 +15,7 @@ import LngBox from "../LngBox/LngBox";
 import Portal from "../ModalPortal/ModalPortel";
 import useModal from "../../Hooks/useModal"
 import MobileMenuModal from "../Modals/MobileMenuModal";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -23,6 +24,8 @@ export default function Header() {
   const [scrollTimeout, setScrollTimeout] = useState(null);
   const [isMouseOverHeader, setIsMouseOverHeader] = useState(false);
   const { mounted,  backDropClose, toggleModal} = useModal();
+  const router = useRouter();
+
 
 
 
@@ -160,19 +163,19 @@ export default function Header() {
             <nav>
               <NavigationList>
                 <li>
-                  <Link href="/about">{t("navigation.about")}</Link>
+                  <Link href="/about" className={router.pathname === "/about" ? "current" : null}>{t("navigation.about")} </Link>
                 </li>
                 <li>
-                  <Link href="/services">{t("navigation.services")}</Link>
+                  <Link href="/services" className={router.pathname === "/services" ? "current" : null}>{t("navigation.services")}</Link>
                 </li>
                 <li>
-                  <Link href="">{t("navigation.pricing")}</Link>
+                  <Link href="" className={router.pathname === "" ? "current" : null}>{t("navigation.pricing")}</Link>
                 </li>
                 <li>
-                  <Link href="">{t("navigation.blog")}</Link>
+                  <Link href="" className={router.pathname === "" ? "current" : null}>{t("navigation.blog")}</Link>
                 </li>
                 <li>
-                  <Link href="/contact">{t("navigation.contacts")}</Link>
+                  <Link href="/contact" className={router.pathname === "/contact" ? "current" : null}>{t("navigation.contacts")}</Link>
                 </li>
               </NavigationList>
             </nav>

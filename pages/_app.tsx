@@ -21,6 +21,7 @@ function App({ Component, pageProps }: AppProps) {
   }, [router.locale]);
 
 
+
   return (
     <>
       <GlobalStyle locale={router.locale}/>
