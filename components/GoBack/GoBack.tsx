@@ -43,10 +43,13 @@ const LinkItem = styled.li`
   & a {
     color: ${({ theme }) => theme.colors.lightText};
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px; /* 162.5% */
+    @media screen and (min-width: 480px){
+      font-size: 16px;
+    }
   }
   &:not(:last-child) a::after {
     content: ">";

@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import GoBack from "../../components/GoBack/GoBack";
 import ServicesSection from "../../components/ServicesSection/ServicesSection";
+import HowWorkSection from "../../components/HowWorkSection/HowWorkSection";
+import GetConsultatioSectionNew from "../../components/GetConsultatioSection/GetConsultatioSectionNew";
 
 export default function Services(){
     const [ready, setReady] = useState(false);
@@ -23,8 +25,8 @@ export default function Services(){
         <>
         <LayoutHome>
           <ServicesSection/>
-        {/* <GoBack prevPath={{ }} title="Services"/>
-            <Link style={{background: "red"}} href="/services/1">Click me</Link> */}
+          <HowWorkSection/>
+          <GetConsultatioSectionNew/>
         </LayoutHome>
         </>
         )

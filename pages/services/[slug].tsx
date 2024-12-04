@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 export default function DetailServices() {
   const [ready, setReady] = useState(false);
   const router = useRouter();
+console.log(router);
 
   useEffect(() => {
     if (router.isReady) {
@@ -15,7 +16,7 @@ export default function DetailServices() {
   return (
     ready && (
       <LayoutHome>
-        <GoBack prevPath={{ path: "/services", text: "Servises" }} title="1" />
+        <GoBack prevPath={{ path: "/services", text: "Servises" }} title={router.query.slug} />
       </LayoutHome>
     )
   );

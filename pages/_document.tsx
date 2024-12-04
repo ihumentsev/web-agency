@@ -16,7 +16,7 @@ export default function Document() {
         <div id="portal" />
         <NextScript />
         {/* <!-- "snowflake", "circle", или "star" --> */}
-        <Script src="/snowfall.js"   strategy="afterInteractive"/>
+        {/* <Script src="/snowfall.js"   strategy="afterInteractive"/> */}
       </body>
     </Html>
  

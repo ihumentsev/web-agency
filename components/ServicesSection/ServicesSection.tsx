@@ -12,14 +12,14 @@ export default function ServicesSection() {
   return (
     <>
       <SectionServices>
+        <GoBack prevPath={{}} title="Services" />
         <Container>
-          <GoBack prevPath={{}} title="Services" />
           <h2>Services</h2>
           <ServicesList>
             <ServicesItem>
               <Link href="/services/web-development">
                 <IconWraper>
-                  <svg width={80} height={80} fill="#fff">
+                  <svg width={40} height={40} fill="#fff" className="icon">
                     <use href="/icons/symbol-defs.svg#icon-Web-Icon"></use>
                   </svg>
 
@@ -42,9 +42,9 @@ export default function ServicesSection() {
               </Link>
             </ServicesItem>
             <ServicesItem>
-              <Link href="#">
+              <Link href="/services/mobile-development">
                 <IconWraper>
-                  <svg width={80} height={80}>
+                  <svg width={40} height={40} className="icon">
                     <use href="/icons/sprite.svg#icon-mobile"></use>
                   </svg>
                   <svg
@@ -66,9 +66,9 @@ export default function ServicesSection() {
               </Link>
             </ServicesItem>
             <ServicesItem>
-              <Link href="#">
+              <Link href="/services/cyber-security">
                 <IconWraper>
-                  <svg width={80} height={80}>
+                  <svg width={40} height={40} className="icon">
                     <use href="/icons/sprite.svg#icon-Security-Icon"></use>
                   </svg>
                   <svg
@@ -90,9 +90,9 @@ export default function ServicesSection() {
               </Link>
             </ServicesItem>
             <ServicesItem>
-              <Link href="#">
+              <Link href="/services/digital-marketing">
                 <IconWraper>
-                  <svg width={80} height={80}>
+                  <svg width={40} height={40} className="icon">
                     <use href="/icons/sprite.svg#icon-Marketing-Icon"></use>
                   </svg>
                   <svg
@@ -114,9 +114,9 @@ export default function ServicesSection() {
               </Link>
             </ServicesItem>
             <ServicesItem>
-              <Link href="#">
+              <Link href="/services/cloud-computing">
                 <IconWraper>
-                  <svg width={80} height={80}>
+                  <svg width={40} height={40} className="icon">
                     <use href="/icons/sprite.svg#icon-Cloud-Icon"></use>
                   </svg>
                   <svg
@@ -138,9 +138,9 @@ export default function ServicesSection() {
               </Link>
             </ServicesItem>
             <ServicesItem>
-              <Link href="#">
+              <Link href="/services/software-development">
                 <IconWraper>
-                  <svg width={80} height={80}>
+                  <svg width={40} height={40} className="icon">
                     <use href="/icons/sprite.svg#icon-Coding-Icon"></use>
                   </svg>
                   <svg
@@ -162,9 +162,9 @@ export default function ServicesSection() {
               </Link>
             </ServicesItem>
             <ServicesItem>
-              <Link href="#">
+              <Link href="/services/project-management">
                 <IconWraper>
-                  <svg width={80} height={80}>
+                  <svg width={40} height={40} className="icon">
                     <use href="/icons/sprite.svg#icon-Rocket-Icon"></use>
                   </svg>
                   <svg
@@ -186,9 +186,9 @@ export default function ServicesSection() {
               </Link>
             </ServicesItem>
             <ServicesItem>
-              <Link href="#">
+              <Link href="/services/data-analysis">
                 <IconWraper>
-                  <svg width={80} height={80}>
+                  <svg width={40} height={40} className="icon">
                     <use href="/icons/sprite.svg#icon-Data-Analysis-Icon"></use>
                   </svg>
                   <svg
@@ -210,9 +210,9 @@ export default function ServicesSection() {
               </Link>
             </ServicesItem>
             <ServicesItem>
-              <Link href="#">
+              <Link href="/services/network-management">
                 <IconWraper>
-                  <svg width={80} height={80}>
+                  <svg width={40} height={40} className="icon">
                     <use href="/icons/sprite.svg#icon-Network-Icon"></use>
                   </svg>
                   <svg
