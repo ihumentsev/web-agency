@@ -1,6 +1,5 @@
 import { useSession } from "next-auth/react";
 import LayoutHome from "../components/LayoutHome/LayoutHome";
-import GoBack from "../components/GoBack/GoBack";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import AboutHero from "../components/AboutHero/AboutHero";
@@ -27,7 +26,6 @@ export default function About() {
       <>
         <LayoutHome>
           <>
-            {/* <GoBack prevPath={{}} title="About us" /> */}
             <AboutHero />
             <TechSection />
             <TeamSection/>
